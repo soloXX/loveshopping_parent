@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75a5d337-ca5f-42bc-96ed-1ef241523e7b" name="Default" comment="" />
+    <list default="true" id="75a5d337-ca5f-42bc-96ed-1ef241523e7b" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/eureka_server_7001/target/" />
@@ -20,12 +23,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="387">
               <caret line="42" column="20" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plat_parent/plat_interface/src/main/java/org/pengxx/loveshopping/Employee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlatApplication_8001.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/PlatApplication_8001.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+              <folding>
+                <element signature="e#364#365#0" expanded="true" />
+                <element signature="e#429#430#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,6 +64,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -60,13 +89,13 @@
         <option value="$PROJECT_DIR$/plat_parent/plat_interface/src/main/java/org/pengxx/loveshopping/Employee.java" />
         <option value="$PROJECT_DIR$/plat_parent/plat_interface/pom.xml" />
         <option value="$PROJECT_DIR$/plat_parent/plat_service_8001/pom.xml" />
-        <option value="$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/PlatApplication_8001.java" />
         <option value="$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/eureka_server_7001/src/main/java/org/pengxx/loveshopping/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/config/Swagger2.java" />
         <option value="$PROJECT_DIR$/zuul_gateway_9527/src/main/java/org/pengxx/loveshopping/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/zuul_gateway_9527/src/main/java/org/pengxx/loveshopping/config/DocumentationConfig.java" />
+        <option value="$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/PlatApplication_8001.java" />
       </list>
     </option>
   </component>
@@ -90,10 +119,13 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="416" />
-    <option name="y" value="244" />
+    <option name="x" value="392" />
+    <option name="y" value="265" />
     <option name="width" value="1378" />
     <option name="height" value="733" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -110,15 +142,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="loveshopping_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveshopping_parent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveshopping_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveshopping_parent" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="loveshopping_parent" type="b2602c69:ProjectViewProjectNode" />
@@ -131,11 +167,46 @@
               <item name="plat_parent" type="462c0819:PsiDirectoryNode" />
               <item name="plat_service_8001" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="loveshopping_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveshopping_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="plat_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="plat_service_8001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveshopping_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveshopping_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="plat_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="plat_service_8001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveshopping_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveshopping_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="plat_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="plat_service_8001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveshopping_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveshopping_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="plat_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="plat_service_8001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="loveshopping" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -333,15 +404,23 @@
       <workItem from="1547130086269" duration="1269000" />
       <workItem from="1547138655474" duration="315000" />
       <workItem from="1547139597554" duration="464000" />
+      <workItem from="1547140257112" duration="210000" />
     </task>
+    <task id="LOCAL-00001" summary="测试">
+      <created>1547140412981</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1547140412981</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11358000" />
+    <option name="totallyTimeSpent" value="11568000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="416" y="244" width="1378" height="733" extended-state="0" />
-    <editor active="true" />
+    <frame x="392" y="265" width="1378" height="733" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -360,11 +439,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22382398" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2723824" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -385,11 +464,23 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -470,13 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plat_parent/plat_interface/src/main/java/org/pengxx/loveshopping/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plat_parent/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -493,18 +577,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/eureka_server_7001/src/main/java/org/pengxx/loveshopping/controller/LoginController.java" />
-    <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/PlatApplication_8001.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="58" lean-forward="false" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#345#346#0" expanded="false" />
-            <element signature="e#410#411#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zuul_gateway_9527/src/main/java/org/pengxx/loveshopping/ZuulGatewayApplication_9527.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -617,6 +689,25 @@
         <state relative-caret-position="387">
           <caret line="42" column="20" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plat_parent/plat_interface/src/main/java/org/pengxx/loveshopping/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/PlatApplication_8001.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding>
+            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
