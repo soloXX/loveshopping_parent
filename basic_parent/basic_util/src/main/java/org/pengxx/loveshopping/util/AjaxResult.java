@@ -19,8 +19,8 @@ public class AjaxResult {
         return massage;
     }
 
-    public AjaxResult setMassage(String massage) {
-        this.massage = massage;
+    public AjaxResult setMessage(String message) {
+        this.massage = message;
         return this;
     }
 
@@ -33,7 +33,7 @@ public class AjaxResult {
         return this;
     }
     //成功
-    public static AjaxResult run(){
+    public static AjaxResult me(){
         return new AjaxResult();
     }
 }

@@ -2,4 +2,4 @@ server:
   port: 9527
 spring:
   application:
-    name: loveshopping-zuul-gateway
+    name: loveshopping-zuul-xx

@@ -3,7 +3,7 @@ spring:
       active: dev
   cloud:
     config:
-      name: application-plat #github上面名称
+      name: application-plat-dev #github上面名称
       profile: ${spring.profiles.active} #环境 java -jar -D xxx jar
       label: master #分支
       discovery:

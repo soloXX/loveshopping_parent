@@ -1,0 +1,1505 @@
+Index: config_server_6001/src/main/java/org/pengxx/loveshopping/ConfigServerApplication_6001.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- config_server_6001/src/main/java/org/pengxx/loveshopping/ConfigServerApplication_6001.java	(date 1547187623020)
++++ config_server_6001/src/main/java/org/pengxx/loveshopping/ConfigServerApplication_6001.java	(date 1547187623020)
+@@ -0,0 +1,15 @@
++package org.pengxx.loveshopping;
++
++import org.springframework.boot.SpringApplication;
++import org.springframework.boot.autoconfigure.SpringBootApplication;
++import org.springframework.cloud.config.server.EnableConfigServer;
++import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
++
++@SpringBootApplication
++@EnableEurekaClient
++@EnableConfigServer
++public class ConfigServerApplication_6001 {
++    public static void main(String[] args) {
++        SpringApplication.run(ConfigServerApplication_6001.class);
++    }
++}
+Index: config_server_6001/src/main/resources/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- config_server_6001/src/main/resources/application.yml	(date 1547188861515)
++++ config_server_6001/src/main/resources/application.yml	(date 1547188861515)
+@@ -0,0 +1,18 @@
++server:
++  port: 6001
++eureka:
++  client:
++    service-url:
++      defaultZone: http://localhost:7001/eureka
++  instance:
++    prefer-ip-address: true
++spring:
++  application:
++    name: loveshopping-config-server
++  cloud:
++    config:
++      server:
++        git:
++          uri: https://github.com/soloXX/loveshopping_config.git
++          username: soloXX
++          password: Xx**4932351
+\ No newline at end of file
+Index: config_server_6001/config_server_6001.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- config_server_6001/config_server_6001.iml	(date 1547187709290)
++++ config_server_6001/config_server_6001.iml	(date 1547187709290)
+@@ -0,0 +1,171 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="Spring" name="Spring">
++      <configuration />
++    </facet>
++    <facet type="web" name="Web">
++      <configuration>
++        <webroots />
++        <sourceRoots>
++          <root url="file://$MODULE_DIR$/src/main/java" />
++          <root url="file://$MODULE_DIR$/src/main/resources" />
++        </sourceRoots>
++      </configuration>
++    </facet>
++  </component>
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
++    <output url="file://$MODULE_DIR$/target/classes" />
++    <output-test url="file://$MODULE_DIR$/target/test-classes" />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
++      <excludeFolder url="file://$MODULE_DIR$/target" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.3" level="project" />
++    <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.2.3" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.10.0" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.10.0" level="project" />
++    <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:1.7.25" level="project" />
++    <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.3.2" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.6" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.6" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.6" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.6" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.34" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:8.5.34" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:8.5.34" level="project" />
++    <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator:6.0.12.Final" level="project" />
++    <orderEntry type="library" name="Maven: javax.validation:validation-api:2.0.1.Final" level="project" />
++    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.3.2.Final" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml:classmate:1.3.4" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-web:5.0.9.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.0.9.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.0.9.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.0.9.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.0.9.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.0.9.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-test:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: com.jayway.jsonpath:json-path:2.4.0" level="project" />
++    <orderEntry type="library" name="Maven: net.minidev:json-smart:2.3" level="project" />
++    <orderEntry type="library" name="Maven: net.minidev:accessors-smart:1.2" level="project" />
++    <orderEntry type="library" name="Maven: org.ow2.asm:asm:5.0.4" level="project" />
++    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
++    <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
++    <orderEntry type="library" name="Maven: org.assertj:assertj-core:3.9.1" level="project" />
++    <orderEntry type="library" name="Maven: org.mockito:mockito-core:2.15.0" level="project" />
++    <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy:1.7.11" level="project" />
++    <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy-agent:1.7.11" level="project" />
++    <orderEntry type="library" name="Maven: org.objenesis:objenesis:2.6" level="project" />
++    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
++    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-library:1.3" level="project" />
++    <orderEntry type="library" name="Maven: org.skyscreamer:jsonassert:1.5.0" level="project" />
++    <orderEntry type="library" name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-core:5.0.9.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.0.9.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-test:5.0.9.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.xmlunit:xmlunit-core:2.5.1" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-context:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-commons:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-netflix-core:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-aop:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.13" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-netflix-eureka-client:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: com.netflix.eureka:eureka-client:1.9.3" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: org.codehaus.jettison:jettison:1.3.7" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: stax:stax-api:1.0.1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.netflix.netflix-commons:netflix-eventbus:0.3.0" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.netflix.netflix-commons:netflix-infix:0.3.0" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: commons-jxpath:commons-jxpath:1.3" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: joda-time:joda-time:2.9.9" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: org.antlr:antlr-runtime:3.4" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: org.antlr:stringtemplate:3.2.1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: antlr:antlr:2.7.7" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.code.gson:gson:2.8.5" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.commons:commons-math:2.2" level="project" />
++    <orderEntry type="library" name="Maven: com.netflix.archaius:archaius-core:0.7.6" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.guava:guava:16.0" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: javax.ws.rs:jsr311-api:1.1.1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.netflix.servo:servo-core:0.12.21" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.sun.jersey:jersey-core:1.19.1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.sun.jersey:jersey-client:1.19.1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.sun.jersey.contribs:jersey-apache-client4:1.19.1" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.6" level="project" />
++    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.11" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.inject:guice:4.1.0" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: javax.inject:javax.inject:1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: aopalliance:aopalliance:1.0" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.github.vlsi.compactmap:compactmap:1.2.1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.github.andrewoma.dexx:dexx-collections:0.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.6" level="project" />
++    <orderEntry type="library" name="Maven: com.netflix.eureka:eureka-core:1.9.3" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: org.codehaus.woodstox:woodstox-core-asl:4.4.1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: javax.xml.stream:stax-api:1.0-2" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: org.codehaus.woodstox:stax2-api:3.1.4" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-netflix-archaius:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-netflix-ribbon:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-netflix-archaius:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: commons-configuration:commons-configuration:1.8" level="project" />
++    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-netflix-ribbon:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: com.netflix.ribbon:ribbon:2.2.5" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.netflix.ribbon:ribbon-transport:2.2.5" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: io.reactivex:rxnetty-contexts:0.4.9" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: io.reactivex:rxnetty-servo:0.4.9" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.netflix.hystrix:hystrix-core:1.5.12" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: io.reactivex:rxnetty:0.4.9" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: io.netty:netty-codec-http:4.1.29.Final" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: io.netty:netty-codec:4.1.29.Final" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: io.netty:netty-transport-native-epoll:4.1.29.Final" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: io.netty:netty-common:4.1.29.Final" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: io.netty:netty-buffer:4.1.29.Final" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: io.netty:netty-transport-native-unix-common:4.1.29.Final" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: io.netty:netty-transport:4.1.29.Final" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: io.netty:netty-resolver:4.1.29.Final" level="project" />
++    <orderEntry type="library" name="Maven: com.netflix.ribbon:ribbon-core:2.2.5" level="project" />
++    <orderEntry type="library" name="Maven: com.netflix.ribbon:ribbon-httpclient:2.2.5" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.netflix.netflix-commons:netflix-commons-util:0.3.0" level="project" />
++    <orderEntry type="library" name="Maven: com.netflix.ribbon:ribbon-loadbalancer:2.2.5" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: com.netflix.netflix-commons:netflix-statistics:0.1.1" level="project" />
++    <orderEntry type="library" name="Maven: io.reactivex:rxjava:1.2.0" level="project" />
++    <orderEntry type="library" name="Maven: com.netflix.ribbon:ribbon-eureka:2.2.5" level="project" />
++    <orderEntry type="library" name="Maven: com.thoughtworks.xstream:xstream:1.4.10" level="project" />
++    <orderEntry type="library" name="Maven: xmlpull:xmlpull:1.1.3.1" level="project" />
++    <orderEntry type="library" name="Maven: xpp3:xpp3_min:1.1.4c" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-config-server:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-config-client:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-actuator:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-actuator-autoconfigure:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-actuator:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: io.micrometer:micrometer-core:1.0.6" level="project" />
++    <orderEntry type="library" name="Maven: org.hdrhistogram:HdrHistogram:2.1.10" level="project" />
++    <orderEntry type="library" name="Maven: org.latencyutils:LatencyUtils:2.0.3" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-crypto:5.0.8.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-rsa:1.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.56" level="project" />
++    <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.56" level="project" />
++    <orderEntry type="library" name="Maven: org.eclipse.jgit:org.eclipse.jgit:4.11.0.201803080745-r" level="project" />
++    <orderEntry type="library" name="Maven: com.jcraft:jsch:0.1.54" level="project" />
++    <orderEntry type="library" name="Maven: com.jcraft:jzlib:1.1.1" level="project" />
++    <orderEntry type="library" name="Maven: com.googlecode.javaewah:JavaEWAH:1.1.6" level="project" />
++    <orderEntry type="library" name="Maven: org.eclipse.jgit:org.eclipse.jgit.http.apache:4.11.0.201803080745-r" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.10" level="project" />
++    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.19" level="project" />
++  </component>
++</module>
+\ No newline at end of file
+Index: config_server_6001/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- config_server_6001/pom.xml	(date 1547187599573)
++++ config_server_6001/pom.xml	(date 1547187599573)
+@@ -0,0 +1,57 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <parent>
++        <artifactId>loveshopping_parent</artifactId>
++        <groupId>org.pengxx.loveshopping</groupId>
++        <version>1.0-SNAPSHOT</version>
++    </parent>
++    <modelVersion>4.0.0</modelVersion>
++
++    <artifactId>config_server_6001</artifactId>
++    <dependencies>
++        <!--springboot支持-->
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-web</artifactId>
++        </dependency>
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-test</artifactId>
++        </dependency>
++
++        <!--eureka客户端-->
++        <dependency>
++            <groupId>org.springframework.cloud</groupId>
++            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
++        </dependency>
++        <!--配置中心支持-->
++        <dependency>
++            <groupId>org.springframework.cloud</groupId>
++            <artifactId>spring-cloud-config-server</artifactId>
++        </dependency>
++    </dependencies>
++    <!--打包插件-->
++    <build>
++        <plugins>
++            <plugin>
++                <groupId>org.springframework.boot</groupId>
++                <artifactId>spring-boot-maven-plugin</artifactId>
++                <configuration>
++                    <mainClass>org.pengxx.loveshopping.ConfigServerApplication_6001</mainClass>
++                    <layout>ZIP</layout>
++                </configuration>
++                <executions>
++                    <execution>
++                        <goals>
++                            <goal>repackage</goal>
++                        </goals>
++                    </execution>
++                </executions>
++            </plugin>
++        </plugins>
++    </build>
++
++
++</project>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_googlecode_javaewah_JavaEWAH_1_1_6.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__com_googlecode_javaewah_JavaEWAH_1_1_6.xml	(date 1547187709590)
++++ .idea/libraries/Maven__com_googlecode_javaewah_JavaEWAH_1_1_6.xml	(date 1547187709590)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.googlecode.javaewah:JavaEWAH:1.1.6">
++    <CLASSES>
++      <root url="jar://J:/soft/repository_x/com/googlecode/javaewah/JavaEWAH/1.1.6/JavaEWAH-1.1.6.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://J:/soft/repository_x/com/googlecode/javaewah/JavaEWAH/1.1.6/JavaEWAH-1.1.6-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://J:/soft/repository_x/com/googlecode/javaewah/JavaEWAH/1.1.6/JavaEWAH-1.1.6-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_jcraft_jsch_0_1_54.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__com_jcraft_jsch_0_1_54.xml	(date 1547187709657)
++++ .idea/libraries/Maven__com_jcraft_jsch_0_1_54.xml	(date 1547187709657)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.jcraft:jsch:0.1.54">
++    <CLASSES>
++      <root url="jar://J:/soft/repository_x/com/jcraft/jsch/0.1.54/jsch-0.1.54.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://J:/soft/repository_x/com/jcraft/jsch/0.1.54/jsch-0.1.54-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://J:/soft/repository_x/com/jcraft/jsch/0.1.54/jsch-0.1.54-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_jcraft_jzlib_1_1_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__com_jcraft_jzlib_1_1_1.xml	(date 1547187709706)
++++ .idea/libraries/Maven__com_jcraft_jzlib_1_1_1.xml	(date 1547187709706)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.jcraft:jzlib:1.1.1">
++    <CLASSES>
++      <root url="jar://J:/soft/repository_x/com/jcraft/jzlib/1.1.1/jzlib-1.1.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://J:/soft/repository_x/com/jcraft/jzlib/1.1.1/jzlib-1.1.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://J:/soft/repository_x/com/jcraft/jzlib/1.1.1/jzlib-1.1.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_4_11_0_201803080745_r.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_4_11_0_201803080745_r.xml	(date 1547187709762)
++++ .idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_4_11_0_201803080745_r.xml	(date 1547187709762)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.eclipse.jgit:org.eclipse.jgit:4.11.0.201803080745-r">
++    <CLASSES>
++      <root url="jar://J:/soft/repository_x/org/eclipse/jgit/org.eclipse.jgit/4.11.0.201803080745-r/org.eclipse.jgit-4.11.0.201803080745-r.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://J:/soft/repository_x/org/eclipse/jgit/org.eclipse.jgit/4.11.0.201803080745-r/org.eclipse.jgit-4.11.0.201803080745-r-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://J:/soft/repository_x/org/eclipse/jgit/org.eclipse.jgit/4.11.0.201803080745-r/org.eclipse.jgit-4.11.0.201803080745-r-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_http_apache_4_11_0_201803080745_r.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_http_apache_4_11_0_201803080745_r.xml	(date 1547187709867)
++++ .idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_http_apache_4_11_0_201803080745_r.xml	(date 1547187709867)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.eclipse.jgit:org.eclipse.jgit.http.apache:4.11.0.201803080745-r">
++    <CLASSES>
++      <root url="jar://J:/soft/repository_x/org/eclipse/jgit/org.eclipse.jgit.http.apache/4.11.0.201803080745-r/org.eclipse.jgit.http.apache-4.11.0.201803080745-r.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://J:/soft/repository_x/org/eclipse/jgit/org.eclipse.jgit.http.apache/4.11.0.201803080745-r/org.eclipse.jgit.http.apache-4.11.0.201803080745-r-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://J:/soft/repository_x/org/eclipse/jgit/org.eclipse.jgit.http.apache/4.11.0.201803080745-r/org.eclipse.jgit.http.apache-4.11.0.201803080745-r-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_client_2_0_1_RELEASE.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_client_2_0_1_RELEASE.xml	(date 1547187709927)
++++ .idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_client_2_0_1_RELEASE.xml	(date 1547187709927)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.cloud:spring-cloud-config-client:2.0.1.RELEASE">
++    <CLASSES>
++      <root url="jar://J:/soft/repository_x/org/springframework/cloud/spring-cloud-config-client/2.0.1.RELEASE/spring-cloud-config-client-2.0.1.RELEASE.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://J:/soft/repository_x/org/springframework/cloud/spring-cloud-config-client/2.0.1.RELEASE/spring-cloud-config-client-2.0.1.RELEASE-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://J:/soft/repository_x/org/springframework/cloud/spring-cloud-config-client/2.0.1.RELEASE/spring-cloud-config-client-2.0.1.RELEASE-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_server_2_0_1_RELEASE.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_server_2_0_1_RELEASE.xml	(date 1547187709986)
++++ .idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_server_2_0_1_RELEASE.xml	(date 1547187709986)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.cloud:spring-cloud-config-server:2.0.1.RELEASE">
++    <CLASSES>
++      <root url="jar://J:/soft/repository_x/org/springframework/cloud/spring-cloud-config-server/2.0.1.RELEASE/spring-cloud-config-server-2.0.1.RELEASE.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://J:/soft/repository_x/org/springframework/cloud/spring-cloud-config-server/2.0.1.RELEASE/spring-cloud-config-server-2.0.1.RELEASE-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://J:/soft/repository_x/org/springframework/cloud/spring-cloud-config-server/2.0.1.RELEASE/spring-cloud-config-server-2.0.1.RELEASE-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_config_2_0_1_RELEASE.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_config_2_0_1_RELEASE.xml	(date 1547189665401)
++++ .idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_config_2_0_1_RELEASE.xml	(date 1547189665401)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.cloud:spring-cloud-starter-config:2.0.1.RELEASE">
++    <CLASSES>
++      <root url="jar://J:/soft/repository_x/org/springframework/cloud/spring-cloud-starter-config/2.0.1.RELEASE/spring-cloud-starter-config-2.0.1.RELEASE.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://J:/soft/repository_x/org/springframework/cloud/spring-cloud-starter-config/2.0.1.RELEASE/spring-cloud-starter-config-2.0.1.RELEASE-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://J:/soft/repository_x/org/springframework/cloud/spring-cloud-starter-config/2.0.1.RELEASE/spring-cloud-starter-config-2.0.1.RELEASE-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(revision f0862b024e6bb774ae3e60d0687b01e98c9cde56)
++++ .idea/compiler.xml	(date 1547187709414)
+@@ -7,6 +7,7 @@
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+         <outputRelativeToContentRoot value="true" />
+         <module name="basic_util" />
++        <module name="config_server_6001" />
+         <module name="eureka_server_7001" />
+         <module name="plat_interface" />
+         <module name="plat_service_8001" />
+@@ -16,6 +17,7 @@
+     <bytecodeTargetLevel>
+       <module name="basic_parent" target="1.8" />
+       <module name="basic_util" target="1.8" />
++      <module name="config_server_6001" target="1.8" />
+       <module name="eureka_server_7001" target="1.8" />
+       <module name="loveshopping_parent" target="1.8" />
+       <module name="plat_interface" target="1.8" />
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/encodings.xml	(revision f0862b024e6bb774ae3e60d0687b01e98c9cde56)
++++ .idea/encodings.xml	(date 1547187709463)
+@@ -4,6 +4,7 @@
+     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/basic_parent" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/basic_parent/basic_util" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/config_server_6001" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/eureka_server_7001" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/plat_parent" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/plat_parent/plat_interface" charset="UTF-8" />
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(revision f0862b024e6bb774ae3e60d0687b01e98c9cde56)
++++ .idea/modules.xml	(date 1547187709529)
+@@ -4,6 +4,7 @@
+     <modules>
+       <module fileurl="file://$PROJECT_DIR$/basic_parent/basic_parent.iml" filepath="$PROJECT_DIR$/basic_parent/basic_parent.iml" />
+       <module fileurl="file://$PROJECT_DIR$/basic_parent/basic_util/basic_util.iml" filepath="$PROJECT_DIR$/basic_parent/basic_util/basic_util.iml" />
++      <module fileurl="file://$PROJECT_DIR$/config_server_6001/config_server_6001.iml" filepath="$PROJECT_DIR$/config_server_6001/config_server_6001.iml" />
+       <module fileurl="file://$PROJECT_DIR$/eureka_server_7001/eureka_server_7001.iml" filepath="$PROJECT_DIR$/eureka_server_7001/eureka_server_7001.iml" />
+       <module fileurl="file://$PROJECT_DIR$/loveshopping_parent.iml" filepath="$PROJECT_DIR$/loveshopping_parent.iml" />
+       <module fileurl="file://$PROJECT_DIR$/plat_parent/plat_interface/plat_interface.iml" filepath="$PROJECT_DIR$/plat_parent/plat_interface/plat_interface.iml" />
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision f0862b024e6bb774ae3e60d0687b01e98c9cde56)
++++ .idea/workspace.xml	(date 1547192944118)
+@@ -2,8 +2,33 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="75a5d337-ca5f-42bc-96ed-1ef241523e7b" name="Default" comment="">
+-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
++      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_javaewah_JavaEWAH_1_1_6.xml" />
++      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jsch_0_1_54.xml" />
++      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jzlib_1_1_1.xml" />
++      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_4_11_0_201803080745_r.xml" />
++      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_http_apache_4_11_0_201803080745_r.xml" />
++      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_client_2_0_1_RELEASE.xml" />
++      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_server_2_0_1_RELEASE.xml" />
++      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_config_2_0_1_RELEASE.xml" />
++      <change beforePath="" afterPath="$PROJECT_DIR$/config_server_6001/config_server_6001.iml" />
++      <change beforePath="" afterPath="$PROJECT_DIR$/config_server_6001/pom.xml" />
++      <change beforePath="" afterPath="$PROJECT_DIR$/config_server_6001/src/main/java/org/pengxx/loveshopping/ConfigServerApplication_6001.java" />
++      <change beforePath="" afterPath="$PROJECT_DIR$/config_server_6001/src/main/resources/application.yml" />
++      <change beforePath="" afterPath="$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/resources/bootstrap.yml" />
++      <change beforePath="" afterPath="$PROJECT_DIR$/zuul_gateway_9527/src/main/resources/bootstrap.yml" />
++      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
++      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
++      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
++      <change beforePath="$PROJECT_DIR$/plat_parent/plat_service_8001/plat_service_8001.iml" afterPath="$PROJECT_DIR$/plat_parent/plat_service_8001/plat_service_8001.iml" />
++      <change beforePath="$PROJECT_DIR$/plat_parent/plat_service_8001/pom.xml" afterPath="$PROJECT_DIR$/plat_parent/plat_service_8001/pom.xml" />
++      <change beforePath="$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/resources/application.yml" />
++      <change beforePath="$PROJECT_DIR$/plat_parent/plat_service_8001/target/classes/application.yml" afterPath="$PROJECT_DIR$/plat_parent/plat_service_8001/target/classes/application.yml" />
++      <change beforePath="$PROJECT_DIR$/plat_parent/plat_service_8001/target/classes/org/pengxx/loveshopping/PlatApplication_8001.class" afterPath="$PROJECT_DIR$/plat_parent/plat_service_8001/target/classes/org/pengxx/loveshopping/PlatApplication_8001.class" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
++      <change beforePath="$PROJECT_DIR$/zuul_gateway_9527/pom.xml" afterPath="$PROJECT_DIR$/zuul_gateway_9527/pom.xml" />
++      <change beforePath="$PROJECT_DIR$/zuul_gateway_9527/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/zuul_gateway_9527/src/main/resources/application.yml" />
++      <change beforePath="$PROJECT_DIR$/zuul_gateway_9527/zuul_gateway_9527.iml" afterPath="$PROJECT_DIR$/zuul_gateway_9527/zuul_gateway_9527.iml" />
+     </list>
+     <ignored path="$PROJECT_DIR$/out/" />
+     <ignored path="$PROJECT_DIR$/target/" />
+@@ -14,48 +39,29 @@
+     <ignored path="$PROJECT_DIR$/plat_parent/target/" />
+     <ignored path="$PROJECT_DIR$/plat_parent/plat_interface/target/" />
+     <ignored path="$PROJECT_DIR$/plat_parent/plat_service_8001/target/" />
++    <ignored path="$PROJECT_DIR$/config_server_6001/target/" />
+     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+     <option name="TRACKING_ENABLED" value="true" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FavoritesManager">
++    <favorites_list name="loveshopping_parent" />
+   </component>
+   <component name="FileEditorManager">
+     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/pom.xml">
++      <file leaf-file-name="bootstrap.yml" pinned="false" current-in-tab="true">
++        <entry file="file://$PROJECT_DIR$/zuul_gateway_9527/src/main/resources/bootstrap.yml">
+           <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="387">
+-              <caret line="42" column="20" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
++            <state relative-caret-position="459">
++              <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+               <folding />
+             </state>
+           </provider>
+         </entry>
+       </file>
+-      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/plat_parent/plat_interface/src/main/java/org/pengxx/loveshopping/Employee.java">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="358">
+-              <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+-              <folding />
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+-      <file leaf-file-name="PlatApplication_8001.java" pinned="false" current-in-tab="true">
+-        <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/PlatApplication_8001.java">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="135">
+-              <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+-              <folding>
+-                <element signature="e#364#365#0" expanded="true" />
+-                <element signature="e#429#430#0" expanded="true" />
+-              </folding>
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+     </leaf>
+   </component>
+   <component name="FileTemplateManagerImpl">
+@@ -82,20 +88,25 @@
+         <option value="$PROJECT_DIR$/eureka_server_7001/src/main/java/org/pengxx/loveshopping/EurekaServerApplication_7001.java" />
+         <option value="$PROJECT_DIR$/basic_parent/pom.xml" />
+         <option value="$PROJECT_DIR$/basic_parent/basic_util/src/main/java/org/pengxx/loveshopping/util/AjaxResult.java" />
+-        <option value="$PROJECT_DIR$/zuul_gateway_9527/pom.xml" />
+-        <option value="$PROJECT_DIR$/zuul_gateway_9527/src/main/resources/application.yml" />
+         <option value="$PROJECT_DIR$/zuul_gateway_9527/src/main/java/org/pengxx/loveshopping/ZuulGatewayApplication_9527.java" />
+         <option value="$PROJECT_DIR$/plat_parent/pom.xml" />
+         <option value="$PROJECT_DIR$/plat_parent/plat_interface/src/main/java/org/pengxx/loveshopping/Employee.java" />
+         <option value="$PROJECT_DIR$/plat_parent/plat_interface/pom.xml" />
+-        <option value="$PROJECT_DIR$/plat_parent/plat_service_8001/pom.xml" />
+-        <option value="$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/resources/application.yml" />
+         <option value="$PROJECT_DIR$/eureka_server_7001/src/main/java/org/pengxx/loveshopping/controller/LoginController.java" />
+         <option value="$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/controller/LoginController.java" />
+         <option value="$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/config/Swagger2.java" />
+         <option value="$PROJECT_DIR$/zuul_gateway_9527/src/main/java/org/pengxx/loveshopping/config/SwaggerConfig.java" />
+         <option value="$PROJECT_DIR$/zuul_gateway_9527/src/main/java/org/pengxx/loveshopping/config/DocumentationConfig.java" />
+         <option value="$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/PlatApplication_8001.java" />
++        <option value="$PROJECT_DIR$/config_server_6001/src/main/java/org/pengxx/loveshopping/ConfigServerApplication_6001.java" />
++        <option value="$PROJECT_DIR$/config_server_6001/pom.xml" />
++        <option value="$PROJECT_DIR$/config_server_6001/src/main/resources/application.yml" />
++        <option value="$PROJECT_DIR$/plat_parent/plat_service_8001/pom.xml" />
++        <option value="$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/resources/application.yml" />
++        <option value="$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/resources/bootstrap.yml" />
++        <option value="$PROJECT_DIR$/zuul_gateway_9527/pom.xml" />
++        <option value="$PROJECT_DIR$/zuul_gateway_9527/src/main/resources/application.yml" />
++        <option value="$PROJECT_DIR$/zuul_gateway_9527/src/main/resources/bootstrap.yml" />
+       </list>
+     </option>
+   </component>
+@@ -118,11 +129,27 @@
+       </MavenImportingSettings>
+     </option>
+   </component>
++  <component name="MavenProjectNavigator">
++    <treeState>
++      <expand>
++        <path>
++          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
++          <item name="plat_service_8001" type="9519ce18:MavenProjectsStructure$ProjectNode" />
++        </path>
++        <path>
++          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
++          <item name="plat_service_8001" type="9519ce18:MavenProjectsStructure$ProjectNode" />
++          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
++        </path>
++      </expand>
++      <select />
++    </treeState>
++  </component>
+   <component name="ProjectFrameBounds">
+-    <option name="x" value="392" />
+-    <option name="y" value="265" />
+-    <option name="width" value="1378" />
+-    <option name="height" value="733" />
++    <option name="x" value="136" />
++    <option name="y" value="177" />
++    <option name="width" value="1516" />
++    <option name="height" value="774" />
+   </component>
+   <component name="ProjectLevelVcsManager">
+     <ConfirmationsSetting value="2" id="Add" />
+@@ -142,7 +169,6 @@
+       <foldersAlwaysOnTop value="true" />
+     </navigator>
+     <panes>
+-      <pane id="Scope" />
+       <pane id="Scratches" />
+       <pane id="ProjectPane">
+         <subPane>
+@@ -154,52 +180,45 @@
+             <path>
+               <item name="loveshopping_parent" type="b2602c69:ProjectViewProjectNode" />
+               <item name="loveshopping_parent" type="462c0819:PsiDirectoryNode" />
+-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
++              <item name="zuul_gateway_9527" type="462c0819:PsiDirectoryNode" />
+             </path>
+             <path>
+               <item name="loveshopping_parent" type="b2602c69:ProjectViewProjectNode" />
+               <item name="loveshopping_parent" type="462c0819:PsiDirectoryNode" />
+-              <item name="plat_parent" type="462c0819:PsiDirectoryNode" />
++              <item name="zuul_gateway_9527" type="462c0819:PsiDirectoryNode" />
++              <item name="src" type="462c0819:PsiDirectoryNode" />
+             </path>
+             <path>
+               <item name="loveshopping_parent" type="b2602c69:ProjectViewProjectNode" />
+               <item name="loveshopping_parent" type="462c0819:PsiDirectoryNode" />
+-              <item name="plat_parent" type="462c0819:PsiDirectoryNode" />
+-              <item name="plat_service_8001" type="462c0819:PsiDirectoryNode" />
+-            </path>
+-            <path>
+-              <item name="loveshopping_parent" type="b2602c69:ProjectViewProjectNode" />
+-              <item name="loveshopping_parent" type="462c0819:PsiDirectoryNode" />
+-              <item name="plat_parent" type="462c0819:PsiDirectoryNode" />
+-              <item name="plat_service_8001" type="462c0819:PsiDirectoryNode" />
++              <item name="zuul_gateway_9527" type="462c0819:PsiDirectoryNode" />
+               <item name="src" type="462c0819:PsiDirectoryNode" />
++              <item name="main" type="462c0819:PsiDirectoryNode" />
+             </path>
+             <path>
+               <item name="loveshopping_parent" type="b2602c69:ProjectViewProjectNode" />
+               <item name="loveshopping_parent" type="462c0819:PsiDirectoryNode" />
+-              <item name="plat_parent" type="462c0819:PsiDirectoryNode" />
+-              <item name="plat_service_8001" type="462c0819:PsiDirectoryNode" />
++              <item name="zuul_gateway_9527" type="462c0819:PsiDirectoryNode" />
+               <item name="src" type="462c0819:PsiDirectoryNode" />
+               <item name="main" type="462c0819:PsiDirectoryNode" />
++              <item name="java" type="462c0819:PsiDirectoryNode" />
+             </path>
+             <path>
+               <item name="loveshopping_parent" type="b2602c69:ProjectViewProjectNode" />
+               <item name="loveshopping_parent" type="462c0819:PsiDirectoryNode" />
+-              <item name="plat_parent" type="462c0819:PsiDirectoryNode" />
+-              <item name="plat_service_8001" type="462c0819:PsiDirectoryNode" />
++              <item name="zuul_gateway_9527" type="462c0819:PsiDirectoryNode" />
+               <item name="src" type="462c0819:PsiDirectoryNode" />
+               <item name="main" type="462c0819:PsiDirectoryNode" />
+               <item name="java" type="462c0819:PsiDirectoryNode" />
++              <item name="loveshopping" type="462c0819:PsiDirectoryNode" />
+             </path>
+             <path>
+               <item name="loveshopping_parent" type="b2602c69:ProjectViewProjectNode" />
+               <item name="loveshopping_parent" type="462c0819:PsiDirectoryNode" />
+-              <item name="plat_parent" type="462c0819:PsiDirectoryNode" />
+-              <item name="plat_service_8001" type="462c0819:PsiDirectoryNode" />
++              <item name="zuul_gateway_9527" type="462c0819:PsiDirectoryNode" />
+               <item name="src" type="462c0819:PsiDirectoryNode" />
+               <item name="main" type="462c0819:PsiDirectoryNode" />
+-              <item name="java" type="462c0819:PsiDirectoryNode" />
+-              <item name="loveshopping" type="462c0819:PsiDirectoryNode" />
++              <item name="resources" type="462c0819:PsiDirectoryNode" />
+             </path>
+           </expand>
+           <select />
+@@ -207,12 +226,13 @@
+       </pane>
+       <pane id="PackagesPane" />
+       <pane id="AndroidView" />
++      <pane id="Scope" />
+     </panes>
+   </component>
+   <component name="PropertiesComponent">
+     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
++    <property name="settings.editor.selected.configurable" value="MavenSettings" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/../aigou_parent" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="aspect.path.notification.shown" value="true" />
+     <property name="project.structure.last.edited" value="Modules" />
+@@ -239,14 +259,14 @@
+       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+       <module />
+     </configuration>
+-    <configuration name="EurekaServerApplication_7001" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++    <configuration name="ConfigServerApplication_6001" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+         <pattern>
+           <option name="PATTERN" value="org.pengxx.loveshopping.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+-      <option name="MAIN_CLASS_NAME" value="org.pengxx.loveshopping.EurekaServerApplication_7001" />
++      <option name="MAIN_CLASS_NAME" value="org.pengxx.loveshopping.ConfigServerApplication_6001" />
+       <option name="VM_PARAMETERS" />
+       <option name="PROGRAM_PARAMETERS" />
+       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+@@ -255,17 +275,17 @@
+       <option name="ENABLE_SWING_INSPECTOR" value="false" />
+       <option name="ENV_VARIABLES" />
+       <option name="PASS_PARENT_ENVS" value="true" />
+-      <module name="eureka_server_7001" />
++      <module name="config_server_6001" />
+       <envs />
+     </configuration>
+-    <configuration name="PlatApplication_8001" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++    <configuration name="EurekaServerApplication_7001" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+         <pattern>
+           <option name="PATTERN" value="org.pengxx.loveshopping.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+-      <option name="MAIN_CLASS_NAME" value="org.pengxx.loveshopping.PlatApplication_8001" />
++      <option name="MAIN_CLASS_NAME" value="org.pengxx.loveshopping.EurekaServerApplication_7001" />
+       <option name="VM_PARAMETERS" />
+       <option name="PROGRAM_PARAMETERS" />
+       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+@@ -274,7 +294,7 @@
+       <option name="ENABLE_SWING_INSPECTOR" value="false" />
+       <option name="ENV_VARIABLES" />
+       <option name="PASS_PARENT_ENVS" value="true" />
+-      <module name="plat_service_8001" />
++      <module name="eureka_server_7001" />
+       <envs />
+     </configuration>
+     <configuration name="ZuulGatewayApplication_9527" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+@@ -330,6 +350,52 @@
+       <envs />
+       <patterns />
+     </configuration>
++    <configuration name="loveshopping_parent [install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
++      <MavenSettings>
++        <option name="myGeneralSettings" />
++        <option name="myRunnerSettings" />
++        <option name="myRunnerParameters">
++          <MavenRunnerParameters>
++            <option name="profiles">
++              <set />
++            </option>
++            <option name="goals">
++              <list>
++                <option value="install" />
++              </list>
++            </option>
++            <option name="profilesMap">
++              <map />
++            </option>
++            <option name="resolveToWorkspace" value="false" />
++            <option name="workingDirPath" value="$PROJECT_DIR$" />
++          </MavenRunnerParameters>
++        </option>
++      </MavenSettings>
++    </configuration>
++    <configuration name="plat_service_8001 [package]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
++      <MavenSettings>
++        <option name="myGeneralSettings" />
++        <option name="myRunnerSettings" />
++        <option name="myRunnerParameters">
++          <MavenRunnerParameters>
++            <option name="profiles">
++              <set />
++            </option>
++            <option name="goals">
++              <list>
++                <option value="package" />
++              </list>
++            </option>
++            <option name="profilesMap">
++              <map />
++            </option>
++            <option name="resolveToWorkspace" value="false" />
++            <option name="workingDirPath" value="$PROJECT_DIR$/plat_parent/plat_service_8001" />
++          </MavenRunnerParameters>
++        </option>
++      </MavenSettings>
++    </configuration>
+     <configuration default="true" type="Remote" factoryName="Remote">
+       <option name="USE_SOCKET_TRANSPORT" value="true" />
+       <option name="SERVER_MODE" value="false" />
+@@ -370,16 +436,20 @@
+       <option name="PROGRAM_PARAMETERS" />
+       <predefined_log_file id="idea.log" enabled="true" />
+     </configuration>
+-    <list size="3">
++    <list size="5">
+       <item index="0" class="java.lang.String" itemvalue="Application.EurekaServerApplication_7001" />
+-      <item index="1" class="java.lang.String" itemvalue="Application.PlatApplication_8001" />
+-      <item index="2" class="java.lang.String" itemvalue="Application.ZuulGatewayApplication_9527" />
++      <item index="1" class="java.lang.String" itemvalue="Application.ConfigServerApplication_6001" />
++      <item index="2" class="java.lang.String" itemvalue="Maven.loveshopping_parent [install]" />
++      <item index="3" class="java.lang.String" itemvalue="Maven.plat_service_8001 [package]" />
++      <item index="4" class="java.lang.String" itemvalue="Application.ZuulGatewayApplication_9527" />
+     </list>
+     <recent_temporary>
+-      <list size="3">
++      <list size="5">
+         <item index="0" class="java.lang.String" itemvalue="Application.ZuulGatewayApplication_9527" />
+-        <item index="1" class="java.lang.String" itemvalue="Application.PlatApplication_8001" />
++        <item index="1" class="java.lang.String" itemvalue="Application.ConfigServerApplication_6001" />
+         <item index="2" class="java.lang.String" itemvalue="Application.EurekaServerApplication_7001" />
++        <item index="3" class="java.lang.String" itemvalue="Maven.plat_service_8001 [package]" />
++        <item index="4" class="java.lang.String" itemvalue="Maven.loveshopping_parent [install]" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -404,7 +474,8 @@
+       <workItem from="1547130086269" duration="1269000" />
+       <workItem from="1547138655474" duration="315000" />
+       <workItem from="1547139597554" duration="464000" />
+-      <workItem from="1547140257112" duration="210000" />
++      <workItem from="1547140257112" duration="287000" />
++      <workItem from="1547187233537" duration="5692000" />
+     </task>
+     <task id="LOCAL-00001" summary="测试">
+       <created>1547140412981</created>
+@@ -413,19 +484,26 @@
+       <option name="project" value="LOCAL" />
+       <updated>1547140412981</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="测试">
++      <created>1547140479848</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1547140479848</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TimeTrackingManager">
+-    <option name="totallyTimeSpent" value="11568000" />
++    <option name="totallyTimeSpent" value="17337000" />
+   </component>
+   <component name="ToolWindowManager">
+-    <frame x="392" y="265" width="1378" height="733" extended-state="0" />
++    <frame x="136" y="177" width="1516" height="774" extended-state="0" />
+     <layout>
+       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
++      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3679818" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+@@ -435,25 +513,25 @@
+       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
++      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
++      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2723824" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
++      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
++      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.021806853" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
++      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
++      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
++      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29395604" sideWeight="0.49126637" order="0" side_tool="false" content_ui="combo" />
+       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
++      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32473445" sideWeight="0.50873363" order="2" side_tool="true" content_ui="tabs" />
+       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+     </layout>
+@@ -551,13 +629,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state relative-caret-position="54">
+           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/zuul_gateway_9527/pom.xml">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="918">
+-          <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+         </state>
+       </provider>
+     </entry>
+@@ -577,28 +648,6 @@
+       </provider>
+     </entry>
+     <entry file="file://$PROJECT_DIR$/eureka_server_7001/src/main/java/org/pengxx/loveshopping/controller/LoginController.java" />
+-    <entry file="file://$PROJECT_DIR$/zuul_gateway_9527/src/main/java/org/pengxx/loveshopping/ZuulGatewayApplication_9527.java">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="243">
+-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+-          <folding />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/resources/application.yml">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="243">
+-          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/controller/LoginController.java">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="255">
+-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+-        </state>
+-      </provider>
+-    </entry>
+     <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/config/Swagger2.java">
+       <provider selected="true" editor-type-id="text-editor">
+         <state relative-caret-position="108">
+@@ -623,13 +672,6 @@
+       <provider selected="true" editor-type-id="text-editor">
+         <state relative-caret-position="161">
+           <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/zuul_gateway_9527/src/main/resources/application.yml">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="188">
+-          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="20" />
+         </state>
+       </provider>
+     </entry>
+@@ -640,14 +682,6 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/eureka_server_7001/src/main/java/org/pengxx/loveshopping/EurekaServerApplication_7001.java">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="189">
+-          <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
+-          <folding />
+-        </state>
+-      </provider>
+-    </entry>
+     <entry file="file://$PROJECT_DIR$/basic_parent/pom.xml">
+       <provider selected="true" editor-type-id="text-editor">
+         <state relative-caret-position="-162">
+@@ -676,38 +710,145 @@
+         </state>
+       </provider>
+     </entry>
++    <entry file="file://$PROJECT_DIR$/plat_parent/plat_interface/src/main/java/org/pengxx/loveshopping/Employee.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="251">
++          <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/eureka_server_7001/src/main/java/org/pengxx/loveshopping/EurekaServerApplication_7001.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="189">
++          <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/config_server_6001/pom.xml">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="353">
++          <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/config_server_6001/src/main/java/org/pengxx/loveshopping/ConfigServerApplication_6001.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="351">
++          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
++          <folding>
++            <element signature="imports" expanded="false" />
++            <element signature="e#440#441#0" expanded="false" />
++            <element signature="e#513#514#0" expanded="false" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/controller/LoginController.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="189">
++          <caret line="12" column="64" lean-forward="false" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/PlatApplication_8001.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="297">
++          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/config_server_6001/src/main/resources/application.yml">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="351">
++          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/resources/application.yml">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="108">
++          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
+     <entry file="file://$PROJECT_DIR$/pom.xml">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="459">
+-          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
++        <state relative-caret-position="-27">
++          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/zuul_gateway_9527/pom.xml">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="699">
++          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+           <folding />
+         </state>
+       </provider>
+     </entry>
+     <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/pom.xml">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="387">
+-          <caret line="42" column="20" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
++        <state relative-caret-position="276">
++          <caret line="67" column="31" lean-forward="true" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/resources/bootstrap.yml">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="0">
++          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+           <folding />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/plat_parent/plat_interface/src/main/java/org/pengxx/loveshopping/Employee.java">
++    <entry file="file://$PROJECT_DIR$/zuul_gateway_9527/src/main/resources/application.yml">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="108">
++          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/zuul_gateway_9527/target/classes/application.yml">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="358">
+-          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
++        <state relative-caret-position="0">
++          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+           <folding />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/plat_parent/plat_service_8001/src/main/java/org/pengxx/loveshopping/PlatApplication_8001.java">
++    <entry file="file://$PROJECT_DIR$/zuul_gateway_9527/target/classes/bootstrap.yml">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="0">
++          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
++          <folding />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/zuul_gateway_9527/src/main/java/org/pengxx/loveshopping/ZuulGatewayApplication_9527.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="135">
+-          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
++        <state relative-caret-position="243">
++          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+           <folding>
+-            <element signature="e#364#365#0" expanded="true" />
+-            <element signature="e#429#430#0" expanded="true" />
++            <element signature="e#527#528#0" expanded="true" />
+           </folding>
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/zuul_gateway_9527/src/main/resources/bootstrap.yml">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="459">
++          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
++          <folding />
+         </state>
+       </provider>
+     </entry>
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- pom.xml	(revision f0862b024e6bb774ae3e60d0687b01e98c9cde56)
++++ pom.xml	(date 1547187415541)
+@@ -13,6 +13,7 @@
+         <module>basic_parent</module>
+         <module>zuul_gateway_9527</module>
+         <module>plat_parent</module>
++        <module>config_server_6001</module>
+     </modules>
+ 
+     <properties>
+Index: plat_parent/plat_service_8001/src/main/resources/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- plat_parent/plat_service_8001/src/main/resources/application.yml	(revision f0862b024e6bb774ae3e60d0687b01e98c9cde56)
++++ plat_parent/plat_service_8001/src/main/resources/application.yml	(date 1547189746135)
+@@ -2,10 +2,4 @@
+   port: 8001
+ spring:
+   application:
+-    name: loveshopping-plat
+-eureka:
+-  client:
+-    service-url:
+-      defaultZone: http://localhost:7001/eureka
+-  instance:
+-    prefer-ip-address: true #显示真实ip
+\ No newline at end of file
++    name: loveshopping-plat
+\ No newline at end of file
+Index: plat_parent/plat_service_8001/src/main/resources/bootstrap.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- plat_parent/plat_service_8001/src/main/resources/bootstrap.yml	(date 1547189875110)
++++ plat_parent/plat_service_8001/src/main/resources/bootstrap.yml	(date 1547189875110)
+@@ -0,0 +1,20 @@
++spring:
++  profiles:
++      active: dev
++  cloud:
++    config:
++      name: application-plat #github上面名称
++      profile: ${spring.profiles.active} #环境 java -jar -D xxx jar
++      label: master #分支
++      discovery:
++        enabled: true #从eureka上面找配置服务
++        service-id: loveshopping-config-server #指定服务名
++      #uri: http://127.0.0.1:1299 #配置服务器 单机配置
++eureka: #eureka不能放到远程配置中
++  client:
++    service-url:
++     defaultZone: http://localhost:7001/eureka  #告诉服务提供者要把服务注册到哪儿 #单机环境
++  instance:
++    prefer-ip-address: true #显示客户端真实ip
++
++
+Index: plat_parent/plat_service_8001/target/classes/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- plat_parent/plat_service_8001/target/classes/application.yml	(revision f0862b024e6bb774ae3e60d0687b01e98c9cde56)
++++ plat_parent/plat_service_8001/target/classes/application.yml	(date 1547189900171)
+@@ -2,10 +2,4 @@
+   port: 8001
+ spring:
+   application:
+-    name: loveshopping-plat
+-eureka:
+-  client:
+-    service-url:
+-      defaultZone: http://localhost:7001/eureka
+-  instance:
+-    prefer-ip-address: true #显示真实ip
+\ No newline at end of file
++    name: loveshopping-plat
+\ No newline at end of file
+Index: plat_parent/plat_service_8001/plat_service_8001.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- plat_parent/plat_service_8001/plat_service_8001.iml	(revision f0862b024e6bb774ae3e60d0687b01e98c9cde56)
++++ plat_parent/plat_service_8001/plat_service_8001.iml	(date 1547189665295)
+@@ -40,7 +40,6 @@
+     <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.3.2" level="project" />
+     <orderEntry type="library" scope="RUNTIME" name="Maven: org.yaml:snakeyaml:1.19" level="project" />
+     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.0.5.RELEASE" level="project" />
+-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.6" level="project" />
+     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.6" level="project" />
+     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.6" level="project" />
+     <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.6" level="project" />
+@@ -154,6 +153,9 @@
+     <orderEntry type="library" name="Maven: com.thoughtworks.xstream:xstream:1.4.10" level="project" />
+     <orderEntry type="library" name="Maven: xmlpull:xmlpull:1.1.3.1" level="project" />
+     <orderEntry type="library" name="Maven: xpp3:xpp3_min:1.1.4c" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-config:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-config-client:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.6" level="project" />
+     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger2:2.9.2" level="project" />
+     <orderEntry type="library" name="Maven: io.swagger:swagger-annotations:1.5.20" level="project" />
+     <orderEntry type="library" name="Maven: io.swagger:swagger-models:1.5.20" level="project" />
+Index: plat_parent/plat_service_8001/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- plat_parent/plat_service_8001/pom.xml	(revision f0862b024e6bb774ae3e60d0687b01e98c9cde56)
++++ plat_parent/plat_service_8001/pom.xml	(date 1547189582347)
+@@ -33,6 +33,12 @@
+             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+         </dependency>
+ 
++        <!--配置中心支持-->
++        <dependency>
++            <groupId>org.springframework.cloud</groupId>
++            <artifactId>spring-cloud-starter-config</artifactId>
++        </dependency>
++
+         <!--引入swagger支持-->
+         <dependency>
+             <groupId>io.springfox</groupId>
+@@ -48,5 +54,24 @@
+ 
+     </dependencies>
+ 
+-
++    <!--打包插件依赖-->
++    <build>
++        <plugins>
++            <plugin>
++                <groupId>org.springframework.boot</groupId>
++                <artifactId>spring-boot-maven-plugin</artifactId>
++                <configuration>
++                    <mainClass>org.pengxx.loveshopping.PlatApplication_8001</mainClass>
++                    <layout>ZIP</layout>
++                </configuration>
++                <executions>
++                    <execution>
++                        <goals>
++                            <goal>repackage</goal>
++                        </goals>
++                    </execution>
++                </executions>
++            </plugin>
++        </plugins>
++    </build>
+ </project>
+\ No newline at end of file
+Index: zuul_gateway_9527/src/main/resources/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- zuul_gateway_9527/src/main/resources/application.yml	(revision f0862b024e6bb774ae3e60d0687b01e98c9cde56)
++++ zuul_gateway_9527/src/main/resources/application.yml	(date 1547192431237)
+@@ -2,17 +2,4 @@
+   port: 9527
+ spring:
+   application:
+-    name: loveshopping-zuul-gateway
+-eureka:
+-  client:
+-    service-url:
+-      defaultZone: http://localhost:7001/eureka
+-  instance:
+-    instance-id: gateway-9527.com
+-    prefer-ip-address: true
+-zuul:
+-  routes:
+-    plat.serviceId: loveshopping-plat #这是调用满足条件的服务名，注意要小写
+-    plat.path: /plat/** #这是所有路径前的通配
+-  ignored-services: "*" #用*来通配符，忽略从9527端口通过服务名来调用
+-  prefix: "/services"
+\ No newline at end of file
++    name: loveshopping-zuul-gateway
+\ No newline at end of file
+Index: zuul_gateway_9527/src/main/resources/bootstrap.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- zuul_gateway_9527/src/main/resources/bootstrap.yml	(date 1547192209191)
++++ zuul_gateway_9527/src/main/resources/bootstrap.yml	(date 1547192209191)
+@@ -0,0 +1,20 @@
++spring:
++  profiles:
++      active: dev
++  cloud:
++    config:
++      name: application-zuul #github上面名称
++      profile: ${spring.profiles.active} #环境 java -jar -D xxx jar
++      label: master #分支
++      discovery:
++        enabled: true #从eureka上面找配置服务
++        service-id: loveshopping-config-server #指定服务名
++      #uri: http://127.0.0.1:1299 #配置服务器 单机配置
++eureka: #eureka不能放到远程配置中
++  client:
++    service-url:
++     defaultZone: http://localhost:7001/eureka  #告诉服务提供者要把服务注册到哪儿 #单机环境
++  instance:
++    prefer-ip-address: true #显示客户端真实ip
++
++
+Index: zuul_gateway_9527/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- zuul_gateway_9527/pom.xml	(revision f0862b024e6bb774ae3e60d0687b01e98c9cde56)
++++ zuul_gateway_9527/pom.xml	(date 1547192115659)
+@@ -32,6 +32,12 @@
+             <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+         </dependency>
+ 
++        <!--配置中心支持-->
++        <dependency>
++            <groupId>org.springframework.cloud</groupId>
++            <artifactId>spring-cloud-starter-config</artifactId>
++        </dependency>
++
+         <!--swagger支持-->
+         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+         <dependency>
+@@ -46,6 +52,26 @@
+             <version>2.9.2</version>
+         </dependency>
+     </dependencies>
++    <!--打包插件依赖-->
++    <build>
++        <plugins>
++            <plugin>
++                <groupId>org.springframework.boot</groupId>
++                <artifactId>spring-boot-maven-plugin</artifactId>
++                <configuration>
++                    <mainClass>org.pengxx.loveshopping.ZuulGatewayApplication_9527</mainClass>
++                    <layout>ZIP</layout>
++                </configuration>
++                <executions>
++                    <execution>
++                        <goals>
++                            <goal>repackage</goal>
++                        </goals>
++                    </execution>
++                </executions>
++            </plugin>
++        </plugins>
++    </build>
+ 
+ 
+ </project>
+\ No newline at end of file
+Index: zuul_gateway_9527/zuul_gateway_9527.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- zuul_gateway_9527/zuul_gateway_9527.iml	(revision f0862b024e6bb774ae3e60d0687b01e98c9cde56)
++++ zuul_gateway_9527/zuul_gateway_9527.iml	(date 1547192169354)
+@@ -38,7 +38,6 @@
+     <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.3.2" level="project" />
+     <orderEntry type="library" scope="RUNTIME" name="Maven: org.yaml:snakeyaml:1.19" level="project" />
+     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.0.5.RELEASE" level="project" />
+-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.6" level="project" />
+     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.6" level="project" />
+     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.6" level="project" />
+     <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.6" level="project" />
+@@ -169,6 +168,9 @@
+     <orderEntry type="library" scope="RUNTIME" name="Maven: org.reactivestreams:reactive-streams:1.0.2" level="project" />
+     <orderEntry type="library" name="Maven: com.netflix.zuul:zuul-core:1.3.1" level="project" />
+     <orderEntry type="library" scope="RUNTIME" name="Maven: commons-io:commons-io:2.4" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-config:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-config-client:2.0.1.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.6" level="project" />
+     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger2:2.9.2" level="project" />
+     <orderEntry type="library" name="Maven: io.swagger:swagger-annotations:1.5.20" level="project" />
+     <orderEntry type="library" name="Maven: io.swagger:swagger-models:1.5.20" level="project" />
+diff --git plat_parent/plat_service_8001/target/classes/org/pengxx/loveshopping/PlatApplication_8001.class plat_parent/plat_service_8001/target/classes/org/pengxx/loveshopping/PlatApplication_8001.class
+index 0ce37e932ce261d9b73593b9d1c5c595bbf0f94e..b8a323748a1fcf5361c62f5995a6e7ab5644ab68
+GIT binary patch
+literal 825
+zc$}3|O>fgc5Ph4Zad84|Qz(>AaSIjd7KsDMP^nnu6agYA95_^KcjIom*|qF-$=~7x
+zLV_Q_k3x*MkqF2f@L|TY@6DT!-5)={eh2Uv_d={-E5P*tH$rUVW`J7^-Dk=ux6jZX
+zKA13cVtXtZ)<(+6SJf<$#XFH`IvI>?D)dAYs*V?j9e1KihTV}ZGM-D5&F5U(b6K9)
+zJXa>;Z?td+d9GC|oU-QV$==?hi1KDa8HTOlhta7x7hDVCj$J`1k?%qj8R>2|zzpHo
+zRz)gbs=9;irV6`t7GZBI<J3$}RH>-l17oc7B$D3uEth$%IW5FYeze6IPpoxZRL-W>
+zOjTADl8-&*1p!M{sEg-~0;#suF*njpwVHED0%w9BntEG@K8UrF#zlQ}5imUbpS>}x
+z|GkX>xBIw*yMI8hlT(>GhMj*-crnwGKHYv%kxhn63y-xZ%c$vwnn$<B$+_e4Vs-V*
+zOC{n9IKq9j=pEKy3#?uP*;R@-c}9L^=QG$R4__kN^@n|g-g*Lh^anyO<H{oWsTTu!
+mgI4<++F#Il|63v?52A)xTaxKfwC*_@-VU(2;9ezv4fq92O5ZF1
+
